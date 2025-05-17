@@ -16,7 +16,7 @@
       color: "Red",
       aed: 18000,
       usd: 49005,
-      location: "Sharjah, UAE",
+      location: "Aurangabad , Maharashtra",
       information: "Established in 2007 as a General Trading company Habibi Used Cars & Auto Spare Parts Trading WRP registered a phenomenal growth in the following years. Having own offices and loading facilities in almost all the states of United States of America, Habibi Used Cars & Auto Spare parts Trading LLC imports more than 75 containers that is 300 accident Cars a month and figures are still growing . ",
       image: "Assest/Images/Thar.webp"
     },
@@ -28,7 +28,7 @@
       color: "Green",
       aed: 18000,
       usd: 67705,
-      location: "Sharjah, UAE",
+      location: "Aurangabad , Maharashtra",
       information: "Established in 2007 as a General Trading company Habibi Used Cars & Auto Spare Parts Trading WRP registered a phenomenal growth in the following years. Having own offices and loading facilities in almost all the states of United States of America, Habibi Used Cars & Auto Spare parts Trading LLC imports more than 75 containers that is 300 accident Cars a month and figures are still growing . ",
       image: "Assest/Images/Lamboroghini.webp"
     },
@@ -40,7 +40,7 @@
       color: "Dark Red",
       aed: 18000,
       usd: 49905,
-      location: "Sharjah, UAE",
+      location: "Pune Maharashtra",
       information: "Established in 2007 as a General Trading company Habibi Used Cars & Auto Spare Parts Trading WRP registered a phenomenal growth in the following years. Having own offices and loading facilities in almost all the states of United States of America, Habibi Used Cars & Auto Spare parts Trading LLC imports more than 75 containers that is 300 accident Cars a month and figures are still growing . ",
       image: "Assest/Images/mahindra.webp"
     },
@@ -52,7 +52,7 @@
       color: "Dark Grey",
       aed: 18000,
       usd: 4905,
-      location: "Sharjah, UAE",
+      location: "Hydrabad India",
       information: "Established in 2007 as a General Trading company Habibi Used Cars & Auto Spare Parts Trading WRP registered a phenomenal growth in the following years. Having own offices and loading facilities in almost all the states of United States of America, Habibi Used Cars & Auto Spare parts Trading LLC imports more than 75 containers that is 300 accident Cars a month and figures are still growing . ",
       image: "Assest/Images/Skoda Kodiaq.webp"
     },
@@ -64,7 +64,7 @@
       color: "Black",
       aed: 18000,
       usd: 4905,
-      location: "Sharjah, UAE",
+      location: "Aurangabad , Maharashtra",
       information: "Established in 2007 as a General Trading company Habibi Used Cars & Auto Spare Parts Trading WRP registered a phenomenal growth in the following years. Having own offices and loading facilities in almost all the states of United States of America, Habibi Used Cars & Auto Spare parts Trading LLC imports more than 75 containers that is 300 accident Cars a month and figures are still growing . ",
       image: "Assest/Images/Hyundai.webp"
     },
@@ -76,7 +76,7 @@
       color: "Green",
       aed: 18000,
       usd: 4905,
-      location: "Sharjah, UAE",
+      location: "Pune , Maharashtra",
       information: "Established in 2007 as a General Trading company Habibi Used Cars & Auto Spare Parts Trading WRP registered a phenomenal growth in the following years. Having own offices and loading facilities in almost all the states of United States of America, Habibi Used Cars & Auto Spare parts Trading LLC imports more than 75 containers that is 300 accident Cars a month and figures are still growing . ",
       image: "Assest/Images/skoda.webp"
     },

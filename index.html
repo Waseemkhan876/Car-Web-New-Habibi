@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habibi Used Cars</title>
+  <link rel="stylesheet" href="./Assest/Css/style.css">
+</head>
+<body>
+  <a href="https://wa.me/917083134006" class="support-float" target="_blank" title="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
+   <p>HABIBI <br> Customer Support</p>
+  </a>
+<header>
+  <div class="nav-container" style="background-color: #1b779b;">
+    <div class="logo"><span class="car">🚗</span>Habibi Used Cars</div>
+    <nav id="navbar">
+      <a style="color: darkmagenta;"  href="#">Home</a>
+      <a href="./Pages/about.html">About</a>
+      <a href="./Pages/contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </div>
+  <div class="update-info">
+    Website Last Updated On: <span id="update-date"></span>
+  </div>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="bg-image">
+ <div>
+  <h2>Welcome to Habibi Used Cars</h2>
+  <p>Use the filters below to find your next car!</p>
+
+  <!-- Filters Section -->
+<div class="filters">
+  <select id="make"></select>
+  <select id="model"></select>
+  <select id="year"></select>
+  <select id="color"></select>
+  <select id="stock"></select>
+  <div style="text-align:center">
+    <button id="search-button" class="btn-search">Search <span id="total-results"></span></button>
+  </div>
+</div>
+
+<!-- Modal for car details -->
+<div id="carModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <div id="modal-details"></div>
+  </div>
+</div>
+ </div>
+</section>
+
+
+
+
+<!-- Car Listings -->
+<div class="car-listings" id="car-list"></div>
+<!-- Footer -->
+<h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif; padding: 3px; color: #f8f8fd; background-color: #336f86; margin-bottom: 3px;">Connecting Our</h2>
+<footer style="background: white; color: rgb(102, 102, 102); padding: 40px 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+ 
+  <div style="max-width: 1200px;  text-align: center; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+    <!-- Contact Info -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>Contact Us</h3>         
+      <p>📍Wangi Kh , Mh20 Aurangabad Maharashtra 431112</p>
+      <p>📞 +91 7083134006</p>
+      <p>📞 +91 8975189140</p>
+      <p>📧 <a id="mail-link" href="mailto:khanwas87609@gmail.com">habibicars@outlook.com</a></p>
+      <div style="margin-top: 10px;">
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="fb" style="height:20px; margin-right:10px;"></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="twitter" style="height:20px; margin-right:10px;"></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="insta" style="height:20px; margin-right:10px;"></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="linkedin" style="height:20px;"></a>
+      </div>
+    </div>
+
+    <!-- Recent Post -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3>Recent Post</h3>
+      <img src="Assest/Images/Thar.webp" alt="post1" style="width: 80px; margin: 5px;">
+      <img src="Assest/Images/skoda.webp" alt="post2" style="width: 80px; margin: 5px;">
+      <img src="Assest/Images/Hyundai.webp" alt="post3" style="width: 80px; margin: 5px;">
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1; min-width: 150px; margin-bottom: 20px; text-decoration: none;">
+      <h3>Quick Links</h3>
+      <ul id="quick-links" style="list-style: none; padding: 0;">
+        <li><a id="mail-link" style="text-decoration: none; color: black;" href="#">Home</a></li>
+        <li><a id="mail-link" style="text-decoration: none;" href="./Pages/about.html">About</a></li>
+        <li><a id="mail-link" style="text-decoration: none;" href="./Pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div style="text-align: center; border-top: 1px solid rgb(68, 66, 66) ; font-size: 17px; color: #857a7a;">
+    <h5>Created Waseem Developer 09</h5>
+    © 2025 Habibi Used Cars WRP LLC. All rights reserved.
+  </div>   
+</footer>
+      <script src="./Assest/JavaScript/car.js"></script>
+</body>
+</html>

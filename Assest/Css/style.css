@@ -1,0 +1,965 @@
+  * {
+      box-sizing: border-box;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    .popup{
+      font-size: 12px;
+      text-align: left;
+    }
+    .pop-car-details{
+      display: flex;
+      color: #d5dbdb;
+      height: 400px;
+    }
+    .car-det{
+    width: 50%;
+    padding: 10px;
+    /* border: 3px solid red; */
+    }
+    .car-about{
+    width: 50%;
+    padding: 10px;
+    /* border: 3px solid red; */
+    }
+    .modal-content {
+      background-color: #817376;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px; right: 20px;
+      font-size: 34px;
+      cursor: pointer;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: white;
+    }
+    .support-float {
+          position: fixed;
+          bottom: 20px;
+          right: 15px;
+          background-color:  rgb(118, 199, 81);
+          color: white;
+          padding: 1px 8px;
+          border-radius: 5px;
+          font-size: 13px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          z-index: 1000;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+        }
+
+        .support-float:hover {
+          background-color: #128C7E;
+        }
+
+        .support-float img {
+          height: 20px;
+          width: 20px;
+        }
+
+
+     .bg-image{
+      /* background-color: #db8b14; */
+      background-image: url("../Images/TharBg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed; /* This line fixes the background */
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      
+
+     }
+    /* Header */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+      background-color: #024fa7;
+    }
+
+    .logo{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      padding-right: 40px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .logo .car{
+      font-size: 2.5rem;
+      /* font-weight: bold; */
+      border: 2px ridge rgba(116, 43, 65, 0.973);
+      border-radius: 50%;
+      padding: 10px;
+      margin: 10px ;
+      text-align: center;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding-right: 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    nav a:hover{
+    color: rgba(116, 43, 65, 0.973);
+    scale: 1.1;   
+    transition: ease 0.5s;
+   }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .update-info {
+      text-align: center;
+      color: rgb(54, 84, 165)  ;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 5px;
+      background-color: #f3f5f5;
+    }
+
+    /* Filters */
+
+    .filters{
+      display: grid;
+      gap: 10px;
+      justify-content: center;
+      padding: 20px;
+      grid-template-columns: repeat(3,2fr);
+    }
+
+    .filters select {
+      padding: 10px;
+      min-width: 390px;
+      font-size: 1rem;
+      border-radius: 3px;
+      background-color: #f5f2f3;
+      cursor: pointer;
+    }
+    .btn-search {
+      background-color: #0d7b8a;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      min-width: 390px;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+    .filters  button:hover{
+     background-color: blueviolet; 
+     transition: ease 0.9s;
+
+    }
+    /* Car Listings */
+    .car-listings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .car-card {
+      background-color: rgb(236, 236, 236);
+      border: 1px solid #858484;
+      border-radius: 1px;
+      padding: 1px;
+      text-align: center;
+      width: 300px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 200px;
+    }
+    .car-card img:hover{
+      scale: 1.05;
+      transition: ease 0.3s;
+      border: 3px ridge  rgba(116, 43, 65, 0.973);
+    }
+    .car-card .year-m-m {
+      font-size: 1rem;
+      background-color:  rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      padding: 5;
+      margin: 0;
+      font-weight: 100;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .stock {
+      background-color: #186f7a;
+      color: white;
+      padding: 5px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+    .aed ,.usd {
+      /* border: 2px solid red;  */
+      font-weight: 600;
+      color:  #024fa7;
+      text-align: left;
+      margin: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .aed-t ,.usd-t {
+      font-weight: 600;
+      color:  #626363;;
+      text-align: left ;
+      margin: 10px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #offer{
+      display: flex;
+      justify-items: center;
+      justify-content: space-around;
+      height: 70px;
+    }
+    #aed-usd{
+      text-align: left;
+    }
+    #offer-t{
+      /* border: 3px solid red; */
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 0px;
+      margin-top: 14px;
+    }
+    .location{
+     font-family: Arial, Helvetica, sans-serif;
+     color:  #024fa7;
+    }
+
+    .btn-view {
+      background-color: rgba(116, 43, 65, 0.973);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .btn-view:hover {
+      background-color: #058292;
+      transition: ease 0.5s;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section:nth-child(even) {
+      background-color: #eee;
+    }
+
+    /* Footer */
+    footer {
+      background-color: white;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+    }
+    .footer-links a {
+      color: rgb(128, 124, 124);
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    #mail-link{
+      text-decoration: none;
+      color: rgb(102, 102, 102);
+    }
+    #mail-link:hover{
+      color: rgb(2, 2, 2);
+    }
+    /* Responsive */
+    @media (max-width: 408px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #db8b14;
+        padding: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .filters {
+        grid-template-columns: 1fr !important;
+      }
+    }
+        html {
+      scroll-behavior: smooth;
+    }
+
+
+
+/* Responsive web //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////alll responsive */
+
+
+
+
+    @media screen and (min-width: 270px) {
+    .support-float {
+      width: 45%;
+      height: 35px;
+      position:fixed;
+      font-size: 10px;
+      right: 10px;
+        }
+    /* Header */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px;
+      flex-wrap: wrap;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .logo{
+      font-size: 0.7rem;
+    }
+    .logo .car{
+      font-size: 1.5rem;
+      /* font-weight: bold; */
+      border: 2px ridge rgba(116, 43, 65, 0.973);
+      border-radius: 50%;
+      padding: 1px;
+      margin: 10px ;
+      text-align: center;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding-right: 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    nav a:hover{
+    color: rgba(116, 43, 65, 0.973);
+    scale: 1.1;   
+    transition: ease 0.5s;
+   }
+
+    .update-info {
+      font-size: 10px;
+    }
+
+    /* Filters */
+    
+    #home{
+      font-size: 12px;
+    }
+
+    .filters select {
+       padding: 7px;
+       border-radius: 6px;
+       min-width: 270px;
+       font-size: 1.0rem;
+       
+    }
+    .btn-search {
+       min-width: 30px;
+    }
+
+   
+    /* Car Listings */
+    .car-listings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .car-card {
+      background-color: rgb(236, 236, 236);
+      border: 1px solid #858484;
+      border-radius: 1px;
+      padding: 1px;
+      text-align: center;
+      width: 300px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 200px;
+    }
+    .car-card img:hover{
+      scale: 1.05;
+      transition: ease 0.3s;
+      border: 3px ridge  rgba(116, 43, 65, 0.973);
+    }
+    .car-card .year-m-m {
+      font-size: 1rem;
+      background-color:  rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      padding: 5;
+      margin: 0;
+      font-weight: 100;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .stock {
+      background-color: #186f7a;
+      color: white;
+      padding: 5px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+    .aed ,.usd {
+      /* border: 2px solid red;  */
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .aed-t ,.usd-t {
+      text-align: left ;
+      margin: 0px;
+    }
+    #offer{
+      display: flex;
+      justify-items: center;
+      justify-content: space-around;
+      height: 70px;
+    }
+    #aed-usd{
+      text-align: left;
+    }
+    #offer-t{
+      /* border: 3px solid red; */
+      font-size: 15px;
+    }
+    .location{
+     font-weight: 300;
+    }
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+    }
+    .footer-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #649a9c;
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .filters {
+        grid-template-columns: 1fr !important;
+      }
+    }
+        html {
+      scroll-behavior: smooth;
+    }
+    }
+/* 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    @media (min-width: 351px) {
+          .bg-image{
+      /* background-color: #db8b14; */
+      background-image: url("../Images/TharBg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed; /* This line fixes the background */
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      
+
+     }
+
+    .support-float {
+      width: 23%;
+      height: 35px;
+      position:fixed;
+      font-size: 10px;
+      right: 10px;
+    }
+    /* Header */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px;
+      flex-wrap: wrap;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .logo{
+      font-size: 0.9rem;
+    }
+    .logo .car{
+      font-size: 1.0rem;
+      /* font-weight: bold; */
+      border: 2px ridge rgba(116, 43, 65, 0.973);
+      border-radius: 50%;
+      padding: 1px;
+      margin: 10px ;
+      text-align: center;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding-right: 40px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    nav a:hover{
+    color: rgba(116, 43, 65, 0.973);
+    scale: 1.1;   
+    transition: ease 0.5s;
+   }
+
+    .update-info {
+      font-size: 14px;
+    }
+
+    /* Filters */
+    
+    #home{
+      font-size: 16px;
+    }
+
+    .filters select {
+       padding: 7px;
+       border-radius: 6px;
+       min-width: 310px;
+       font-size: 1.0rem;
+       
+    }
+    .btn-search {
+       min-width: 30px;
+    }
+
+   
+    /* Car Listings */
+    .car-listings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .car-card {
+      background-color: rgb(236, 236, 236);
+      border: 1px solid #858484;
+      border-radius: 1px;
+      padding: 1px;
+      text-align: center;
+      width: 300px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 200px;
+    }
+    .car-card img:hover{
+      scale: 1.05;
+      transition: ease 0.3s;
+      border: 3px ridge  rgba(116, 43, 65, 0.973);
+    }
+    .car-card .year-m-m {
+      font-size: 1rem;
+      background-color:  rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      padding: 5;
+      margin: 0;
+      font-weight: 100;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .stock {
+      background-color: #186f7a;
+      color: white;
+      padding: 5px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+    .aed ,.usd {
+      /* border: 2px solid red;  */
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .aed-t ,.usd-t {
+      text-align: left ;
+      margin: 0px;
+    }
+    #offer{
+      display: flex;
+      justify-items: center;
+      justify-content: space-around;
+      height: 70px;
+    }
+    #aed-usd{
+      text-align: left;
+    }
+    #offer-t{
+      /* border: 3px solid red; */
+      font-size: 15px;
+    }
+    .location{
+     font-weight: 300;
+    }
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+    }
+    .footer-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #649a9c;
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .filters {
+        grid-template-columns: 1fr !important;
+      }
+    }
+        html {
+      scroll-behavior: smooth;
+    }
+    }
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    
+ @media (min-width: 1024px) {
+          .bg-image{
+      /* background-color: #db8b14; */
+      background-image: url("../Images/TharBg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed; /* This line fixes the background */
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      
+
+     }
+
+    .support-float {
+      width: 10%;
+      height: 35px;
+      position:fixed;
+      font-size: 10px;
+      right: 10px;
+    }
+    /* Header */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px;
+      flex-wrap: wrap;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .logo{
+      font-size: 1.3rem;
+    }
+    .logo .car{
+      font-size: 1.9rem;
+      /* font-weight: bold; */
+      border: 2px ridge rgba(116, 43, 65, 0.973);
+      border-radius: 50%;
+      padding: 1px;
+      margin: 18px ;
+      text-align: center;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding-right: 40px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    nav a:hover{
+    color: rgba(116, 43, 65, 0.973);
+    scale: 1.1;   
+    transition: ease 0.5s;
+   }
+
+    .update-info {
+      font-size: 23px;
+    }
+
+    /* Filters */
+    
+    #home{
+      font-size: 26px;
+    }
+
+    .filters select {
+       padding: 7px;
+       border-radius: 6px;
+       min-width: 350px;
+       font-size: 1.0rem;
+       
+    }
+    .btn-search {
+       min-width: 30px;
+    }
+
+   
+    /* Car Listings */
+    .car-listings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .car-card {
+      background-color: rgb(236, 236, 236);
+      border: 1px solid #858484;
+      border-radius: 1px;
+      padding: 1px;
+      text-align: center;
+      width: 300px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 200px;
+    }
+    .car-card img:hover{
+      scale: 1.05;
+      transition: ease 0.3s;
+      border: 3px ridge  rgba(116, 43, 65, 0.973);
+    }
+    .car-card .year-m-m {
+      font-size: 1rem;
+      background-color:  rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      padding: 5;
+      margin: 0;
+      font-weight: 100;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .stock {
+      background-color: #186f7a;
+      color: white;
+      padding: 5px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+    .aed ,.usd {
+      /* border: 2px solid red;  */
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .aed-t ,.usd-t {
+      text-align: left ;
+      margin: 0px;
+    }
+    #offer{
+      display: flex;
+      justify-items: center;
+      justify-content: space-around;
+      height: 70px;
+    }
+    #aed-usd{
+      text-align: left;
+    }
+    #offer-t{
+      /* border: 3px solid red; */
+      font-size: 15px;
+    }
+    .location{
+     font-weight: 300;
+    }
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+    }
+    .footer-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #649a9c;
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .filters {
+        grid-template-columns: 1fr !important;
+      }
+    }
+        html {
+      scroll-behavior: smooth;
+    }
+    }
